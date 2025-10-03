@@ -59,7 +59,7 @@ int main()
     sorter::MemorySort* memorySort = new sorter::MemorySort();
 
     auto start = std::chrono::high_resolution_clock::now();
-    memorySort->sort(data.data);
+    memorySort->sort(data.data, elements);
     auto end = std::chrono::high_resolution_clock::now();
     std::cout << "Done sorting, completed in " << (end - start).count() << " Nanoseconds\n";
     printHistogram(&data, elements);
