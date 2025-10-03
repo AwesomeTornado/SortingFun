@@ -6,6 +6,7 @@ A really stupid sorting algorithm lol
 */
 namespace sorter {
 	class MemorySort {
+	public:
 		void sort(int* array);
 	};
 }
