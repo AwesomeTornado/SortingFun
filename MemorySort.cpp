@@ -33,10 +33,14 @@ void sorter::MemorySort::sort(int* array, int length)
 		memoryMap[array[i] - min] = i;
 	}
 	int index = 0;
+	int* arrayCopy = new int[length];
 	for (int i = 0; i < size; i++) {
 		if (memoryMap[i] != -1) {
-			swap(array, index, memoryMap[i]);
+			arrayCopy[index] = array[memoryMap[i]];
 			index++;
 		}
+	}
+	for (int i = 0; i < length; i++) {
+		array[i] = arrayCopy[i];
 	}
 }
